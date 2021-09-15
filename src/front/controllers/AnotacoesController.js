@@ -2,10 +2,7 @@ class AnotacoesController {
   static _notasArr = [];
   
   /** Adiciona uma nova anotação ao array de notas. */
-  static addAnotacao() {
-    const titulo = document.getElementById('titulo').value;
-    const notas = document.getElementById('descricaoTarefa').value;
-    
+  static addAnotacao(titulo, notas) {
     const anotacao = new Anotacoes(titulo, notas);
     
     this._notasArr.push(anotacao);
@@ -21,8 +18,7 @@ class AnotacoesController {
           view = new AnotacoesView(ultimaAnotacao),
           card = view.cartao();
 
-    cardsDiv.appendChild(card);
-    cardsDiv.classList.remove('hide');
+    view.insereCartao(card, cardsDiv);
   }
 
   get notasArr() {

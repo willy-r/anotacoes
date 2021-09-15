@@ -37,4 +37,14 @@ class AnotacoesView {
 
     return card;
   }
+
+  /**
+   * Insere um cartão na div pai.
+   * 
+   * @param {HTMLDivElement} cartao Elemento representando um cartão.
+   * @param {HTMLDivElement} cardsDiv A div que envolverá todos os cartões.
+   */
+  insereCartao(cartao, cardsDiv) {
+    cardsDiv.appendChild(cartao);
+  }
 }
