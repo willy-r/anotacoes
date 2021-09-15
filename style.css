@@ -1,1 +1,8 @@
 .ff-indie-flower { font-family: 'Indie Flower'; }
+
+.card-w {
+  flex: auto !important;
+  max-width: 15rem;
+}
+
+.flex-gap { gap: 1.5rem .5rem; }

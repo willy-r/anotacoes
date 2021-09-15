@@ -37,19 +37,21 @@
     </script>
 
     <!-- JS local. -->
-    <script src="src/front/models/Anotacoes.js"></script>
+    <script src="src/front/models/Anotacoes.js" defer></script>
+    <script src="src/front/controllers/AnotacoesController.js" defer></script>
+    <script src="src/front/index.js" defer></script>
   </head>
   <body class="bg-dark">
     <header class="bg-dark text-center">
       <h1 class="mb-0 mt-3 text-light w-100 ff-indie-flower">
-        Minhas anotações
+        Anotações
       </h1>
     </header>
     <hr class="bg-light ">
     <main>
       <div class="d-flex justify-content-center">
         <div class="w-50 p-4 border rounded shadow-sm bg-light"> 
-          <form class="flex-fill">
+          <form class="flex-fill" id="form">
             <div class="form-group">
               <label for="note-title"><b>Título:</b></label>
               <input class="form-control" name="note-title" type="text" id="titulo" placeholder="Título" required>
@@ -64,7 +66,61 @@
         </div>
       </div>
 
-      <div class="d-flex p-2" id="notes"></div>
+      <div class="container mt-3 p-2">
+        <h2 class="text-light text-center ff-indie-flower">Minhas anotações:</h2>
+
+        <div class="d-flex justify-content-center">
+          <div class="card-deck flex-gap w-75 py-3 px-1 bg-light border rounded shadow-sm" id="notas">
+            <div class="card text-white bg-dark card-w">
+              <article class="card-body">
+                <h3 class="card-title">Card title</h3>
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                </p>
+              </article>
+              <div class="card-footer border-light">
+                <small class="text-muted" id="time">Last updated 3 mins ago</small>
+              </div>
+            </div>
+
+            <div class="card text-white bg-dark card-w">
+              <article class="card-body">
+                <h3 class="card-title">Card title</h3>
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                </p>
+              </article>
+              <div class="card-footer border-light">
+                <small class="text-muted" id="time">Last updated 3 mins ago</small>
+              </div>
+            </div>
+
+            <div class="card text-white bg-dark card-w">
+              <article class="card-body">
+                <h3 class="card-title">Card title</h3>
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                </p>
+              </article>
+              <div class="card-footer border-light">
+                <small class="text-muted" id="time">Last updated 3 mins ago</small>
+              </div>
+            </div>
+
+            <div class="card text-white bg-dark card-w">
+              <article class="card-body">
+                <h3 class="card-title">Card title</h3>
+                <p class="card-text">
+                  This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                </p>
+              </article>
+              <div class="card-footer border-light">
+                <small class="text-muted" id="time">Last updated 3 mins ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

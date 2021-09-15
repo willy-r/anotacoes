@@ -1,4 +1,4 @@
-# Projeto anotações
+# Projeto Anotações
 
 Anotações é uma página web que tem a intenção de simplesmente guardar anotações, sobre qualquer coisa, quando você quiser.
 
