@@ -6,9 +6,23 @@ class AnotacoesController {
     const titulo = document.getElementById('titulo').value;
     const notas = document.getElementById('descricaoTarefa').value;
     
-    const anotacao = new Anotacoes(titulo, notas)
+    const anotacao = new Anotacoes(titulo, notas);
     
     this._notasArr.push(anotacao);
+  }
+
+  /**
+   * Faz a lógica para mostrar a anotação adicionada.
+   * 
+   * @param {HTMLDivElement} cardsDiv A div que guarda as anotações.
+  */
+  static mostraAnotacao(cardsDiv) {
+    const ultimaAnotacao = this._notasArr[this._notasArr.length - 1],
+          view = new AnotacoesView(ultimaAnotacao),
+          card = view.cartao();
+
+    cardsDiv.appendChild(card);
+    cardsDiv.classList.remove('hide');
   }
 
   get notasArr() {

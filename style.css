@@ -6,3 +6,5 @@
 }
 
 .flex-gap { gap: 1.5rem .5rem; }
+
+.hide { display: none; }
